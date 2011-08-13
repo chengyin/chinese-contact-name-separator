@@ -1,5 +1,6 @@
-AssignPhoneticName.py
+SeparateChineseNames.py
 =====================
+将地址簿中中文名字拆分成姓和名按 Last Name 和 First Name 存储。
 
 需求
 ----
@@ -11,18 +12,20 @@ AssignPhoneticName.py
 ----
 
 1. 关闭 Address Book。
-
 2. 执行
+    $ python SeparateChineseNames.py
+    
+这个命令会将地址簿中中文名字拆分成姓和名按 Last Name 和 First Name 存储。
 
-    $ python AssignPhoneticName.py
+具体来说，所更新的项为：
+1. 有 First Name 而没有 Last Name。
+2. First Name 全为汉字且长度在 1 和 3 之间。
 
-这个命令会给所有*包含中文*的地址簿项根据 First Name 和 Last Name
-分别分配对应的汉语拼音作为 Phonetic First Name 和 Phonetic Last
-Name。对于已经分配了 Phonetic Name 的，会跳过，除非使用 `-r`
-参数调用这个脚本。
+脚本*不会*处理复姓、公司名称等情况。
 
 ---
 
-其他的问题请联系 gzjjgod@gmail.com。
+其他的问题请联系 chengyin.liu@gmail.com。
+基本框架 fork 自 jjgod 的 [APN 脚本](http://github.com/jjgod/apn)。
 
 Please use it at your own risk.
